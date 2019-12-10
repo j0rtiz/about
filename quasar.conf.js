@@ -55,12 +55,10 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       scopeHoisting: true,
-      // vueRouterMode: 'history',
-      // showProgress: false,
-      // gzip: true,
-      // analyze: true,
-      // preloadChunks: false,
-      // extractCSS: false,
+      vueRouterMode: 'history',
+      showProgress: false,
+      distDir: 'dist',
+      publicPath: '/',
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack (cfg) {
