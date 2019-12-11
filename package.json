@@ -1,14 +1,13 @@
 {
-  "name": "about",
+  "name": "j0rtiz",
   "version": "1.0.0",
-  "description": "About",
-  "productName": "About",
+  "description": "j0rtiz",
+  "productName": "j0rtiz",
   "cordovaId": "org.cordova.quasar.app",
-  "author": "Jairo Ortiz <j0rtiz@protonmail.ch>",
+  "author": "j0rtiz <j0rtiz@protonmail.ch>",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
-    "test": "echo \"No test specified\" && exit 0",
+    "lint": "eslint --ext --fix .js,.vue src",
     "dev": "quasar dev",
     "build": "quasar build"
   },
