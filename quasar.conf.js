@@ -37,7 +37,6 @@ module.exports = function (ctx) {
       }
     },
     devServer: {
-      https: true,
       port: 5000,
       open: true
     },
