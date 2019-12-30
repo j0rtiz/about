@@ -94,6 +94,10 @@ export default {
     },
     leave () {
       this.enter = false
+
+      setTimeout(() => {
+        this.enter = true
+      }, 3000)
     }
   }
 }
