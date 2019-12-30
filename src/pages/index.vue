@@ -39,14 +39,26 @@
             dark
             flat
           >
-            <q-card-section class="text-white text-center q-pb-xl">
-              <p class="content">Meu nome eh</p>
-              <p class="title">Jairo Ortiz</p>
-              <p class="content">Trabalho na GOVBR Sul como Programador de Sistemas</p>
+            <q-card-section class="text-center q-pb-xl">
+              <div class="content">
+                <p>Meu nome eh</p>
+                <p class="title">Jairo Ortiz</p>
+                <p>
+                  Trabalho na
+                  <span
+                    class="cursor-pointer"
+                    @click="openURL('http://www.govbrsul.com.br')"
+                  >
+                    <span class="text-blue">GOV</span>
+                    <span class="text-green">BR</span>
+                  </span>
+                  como Programador de Sistemas
+                </p>
+              </div>
             </q-card-section>
 
             <q-card-section
-              class="text-white text-center"
+              class="text-center"
               :class="{ 'q-pa-xl': $q.screen.sm || $q.screen.xs }"
             >
               <p class="content">Um pouco mais sobre mim:</p>
