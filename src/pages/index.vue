@@ -5,7 +5,10 @@
       enter-active-class="animated bounceInLeft"
       leave-active-class="animated bounceOutRight"
     >
-      <div :class="{ 'main row q-pa-xs': !$q.screen.sm && !$q.screen.xs }">
+      <div
+        v-if="enter"
+        :class="{ 'main row q-pa-xs': !$q.screen.sm && !$q.screen.xs }"
+      >
         <div
           class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
           :class="{ 'q-pa-xs': !$q.screen.sm && !$q.screen.xs }"
@@ -19,7 +22,7 @@
               <q-avatar
                 class="cursor-pointer"
                 size="200px"
-                @click="reload"
+                @click="leave"
               >
                 <img src="statics/img/j0rtiz.jpg">
               </q-avatar>
@@ -68,12 +71,17 @@ import { openURL } from 'quasar'
 
 export default {
   name: 'PageIndex',
+  data () {
+    return {
+      enter: true
+    }
+  },
   methods: {
     openURL (url) {
       openURL(url)
     },
-    reload () {
-      location.reload()
+    leave () {
+      this.enter = false
     }
   }
 }
