@@ -16,7 +16,11 @@
             flat
           >
             <q-card-section class="text-center q-pa-xl">
-              <q-avatar size="200px">
+              <q-avatar
+                class="cursor-pointer"
+                size="200px"
+                @click="reload"
+              >
                 <img src="statics/img/j0rtiz.jpg">
               </q-avatar>
             </q-card-section>
@@ -44,7 +48,11 @@
             >
               <p class="content">Um pouco mais sobre mim:</p>
 
-              <q-avatar size="80px">
+              <q-avatar
+                class="cursor-pointer"
+                size="80px"
+                @click="openURL('https://github.com/j0rtiz')"
+              >
                 <img src="statics/img/github.png">
               </q-avatar>
             </q-card-section>
@@ -56,7 +64,17 @@
 </template>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  methods: {
+    openURL (url) {
+      openURL(url)
+    },
+    reload () {
+      location.reload()
+    }
+  }
 }
 </script>
